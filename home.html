@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style type="text/css">
+.nav 
+{
+    width: 17%;  
+    background-color: rgb(122,185,0);
+    color: rgb(255,255,255);
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+a:link    {color:orange;}
+a:visited {color:green;}
+a:hover   {color:blue;}
+a:active  {color:yellow;}
+a, u      {text-decoration: none;}
+
+</style>
+</head>
+
+<title>Pattern Analysis System for Intrusion Detection</title>
+
+
+
+<center><table border=0 width=850 cellspacing=0>
+
+<tr>
+<td align=center><b><font color="gray">Hello User!</font></b></td>
+<td>
+
+<center><img src="Picture1.png" /></center>
+
+</td>
+<td align=center><b><font color="gray">Logout</font></b></td>
+</tr>
+<td><br><td>
+<tr>
+<td></td>
+<td>
+<a href="#"><div class="nav">Live Mode</div></a> &nbsp;
+<a href="analysismode.html">Analysis Mode</a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<body>
+<p id="demo">Click the button to get your position:</p>
+<button onclick="getLocation()">Try It</button>
+<div id="mapholder"></div>
+<script>
+ </style>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    
+function initialize() {
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+
+function showPosition(position)
+  {
+  var latlon=position.coords.latitude+","+position.coords.longitude;
+
+  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+  +latlon+"&zoom=14&size=600x420&sensor=false";
+  document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
+  }
+
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="An unknown error occurred."
+      break;
+    }
+  }
+</script>
+</body>
+
+</td>
+</tr>
+
+<tr >
+<td colspan=3 align=center><img src="Status.png" alt="System Status" title="Status.png, 1" height="35" width="300"></td>
+</tr>
+
+</table>
+</center>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,30 @@
+/* CSS Document */
+.nav 
+{
+    background-color: #F9F8F4;
+    display: inline-block;
+    list-style:none;
+    float:left;
+    margin: 1px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+a:link    {color: #ACABAB;}
+a:visited {color: #ACABAB;}
+a:hover   {color: rgb(230,150,120);}
+a:active  {color: blue;}
+a, u      {text-decoration: none;}
+
+
+#map {
+        width: 770px;
+        height: 570px;
+      }
+      
+#map_canvas {
+        width: 770px;
+        height: 570px;
+      }
+      
+  
