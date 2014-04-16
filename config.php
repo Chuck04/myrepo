@@ -2,6 +2,6 @@
 // Database parameters in config.php
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = '';
+$dbpass = 'test';
 $dbname = 'panid';
 ?>
